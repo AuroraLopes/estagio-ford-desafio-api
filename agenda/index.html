@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer ></script>
+    <title>Sua Agenda</title>
+</head>
+<body>
+    <main>
+        <section class="main__agenda">
+            <div class="main__agenda__content">
+                <h1 id="titulo-agenda">Seus compromissos:</h1>
+                <div id="main__agenda__content__compromissos">     
+                </div>  
+            </div>
+            <div class="buttons">
+                <button id="button__adicionar__compromisso">Adicionar</button>
+                <button id="button__editar__compromisso">Editar</button>
+                <button id="button__deletar__compromisso">Deletar</button>
+            </div>
+
+            <div class="main__agenda__content__adicionar_compromisso">
+                <form >
+                    <p>
+                        <label for="nome__compromisso">Nome do evento:</label>
+                        <input type="text" nome="nome__compromisso" id="nome__compromisso" required="required">
+                    </p>
+                    
+                    <p>
+                        <label for="data__compromisso">Data do Evento:</label>
+                        <input type="date" name="data__compromisso" id="data__compromisso">
+                    </p>
+
+                    <p>
+                        <label for="urgencia__compromisso"> Nivel de Urgência:</label>
+                        <input id="urgencia__compromisso__lista" list="urgencia__compromisso__lista__data" />
+                        <datalist id="urgencia__compromisso__lista__data">
+                        <option value="Urgente"></option>
+                        <option value="Pouco Urgente"></option>
+                        <option value="Normal"></option>
+                        </datalist>
+                    </p>
+
+                    <p>
+                        <label for="descricao__compromisso">Descrição do Evento:</label>
+                        <input type="text" nome="descricao__compromisso" id="descricao__compromisso">
+                    </p>
+
+                    <button id="button__adicionar__compromisso__form">Adicionar</button>
+
+                </form>
+            </div>
+
+            <div class="main__agenda__content__editar__compromisso">
+                <form >
+                    <p>
+                        <label for="nome__compromisso__editar">Nome do evento:</label>
+                        <input type="text" nome="nome__compromisso__editar" id="nome__compromisso__editar" required="required">
+                    </p>
+                    
+                    <p>
+                        <label for="data__compromisso__editar">Data do Evento:</label>
+                        <input type="date" name="data__compromisso__editar" id="data__compromisso__editar">
+                    </p>
+
+                    <p>
+                        <label for="urgencia__compromisso__editar"> Nivel de Urgência:</label>
+                        <input id="urgencia__compromisso__lista__editar" list="urgencia__compromisso__lista__data__editar" />
+                        <datalist id="urgencia__compromisso__lista__data__editar">
+                        <option value="Urgente"></option>
+                        <option value="Pouco Urgente"></option>
+                        <option value="Normal"></option>
+                        </datalist>
+                    </p>
+
+                    <p>
+                        <label for="descricao__compromisso__editar">Descrição do Evento:</label>
+                        <input type="text" nome="descricao__compromisso__editar" id="descricao__compromisso__editar">
+                    </p>
+
+                    <button id="button__editar__compromisso__form">Salvar</button>
+
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,97 @@
+.main__agenda__content__adicionar_compromisso{
+    display: none;
+}
+
+.main__agenda__content__editar__compromisso{
+    display: none;
+}
+
+#titulo-agenda{
+    color: #2c3e50;
+    padding: 30px;
+    text-align: center;
+}
+
+.buttons{
+    padding: 30px;
+}
+
+.main__agenda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main__agenda__content__compromissos{
+    display: flex;
+    column-gap: 20px;
+    height: 200px;
+    align-items: center;
+}
+
+
+.evento {
+    margin-bottom: 20px;
+    padding: 15px;
+    overflow: auto;
+    width: 150px;
+    height: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f2f2f2;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.evento::-webkit-scrollbar {
+    width: 0px;
+}
+
+.evento-titulo {
+    font-size: 20px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+
+.evento-data {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-bottom: 8px;
+}
+
+
+.evento-descricao {
+    font-size: 16px;
+    color: #34495e;
+    word-break: break-all;
+    line-height: 1.5;
+}
+
+button{
+    width: 90px;
+    height: 40px;
+    background-color: #2c3e50;
+    color: #ddd;
+    border-radius: 15px;
+    border: none;
+}
+
+.selecionado{
+    background-color: #2c3e50;
+}
+
+.selecionado .evento-descricao{
+    color: #ddd;
+}
+
+.selecionado .evento-data{
+    color: #ddd;
+}
+
+.selecionado .evento-titulo{
+    color: #ddd;
+}
+
+
+
