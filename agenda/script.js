@@ -47,7 +47,7 @@ function abrirForm(){
 /* Criei uma function para adicionar eventos ao no banco de dados utilizando o metodo de POST*/ 
 async function adicionarEvento() {
 
-    let UrgenciaCompromisso = document.getElementById('urgencia__compromisso__lista');
+    const UrgenciaCompromisso = document.getElementById('urgencia__compromisso__lista');
 
     const response = await fetch('http://localhost:3000/compromissos', {
         headers: {
@@ -65,14 +65,14 @@ async function adicionarEvento() {
     console.log(UrgenciaCompromisso.value)
     buscarEventos()
 }
-/* Utilizando o metodo GET do Fetch crieu essa function que busca os eventos que foram adicionados ao banco de dados e atualiza 
+/* Utilizando o metodo GET do Fetch criei essa function que busca os eventos que foram adicionados ao banco de dados e atualiza 
 a pagina para que o evento recem adicionada seja mostrado na aba de "Seus Compromissos:" utilizando o creatElement e o appendChild para criar
 um nó no elemento pai e fazer com que eles não saissem do mesmo.*/
 async function buscarEventos() {
     const response = await fetch('http://localhost:3000/compromissos')
     const data = await response.json()
 
-    let eventos = data;
+    const eventos = data;
     ContentEventos.replaceChildren(); //serve para limpar todos os filhos em uma lista vazia para que não se repita o que ja foi passado antes.
 
     for (let n = 0; n < eventos.length; n++) {
@@ -111,7 +111,7 @@ async function buscarEventos() {
 
 }
 
-/* S */
+/* Seleciona o elemento clicado para obter dados para manipulação. */
 async function selecionarElemento(evento) {
     let itemsId;
     let element = evento.srcElement;
@@ -121,10 +121,6 @@ async function selecionarElemento(evento) {
         element = element.parentElement;
         itemsId = element.getAttribute('data-id');
     }
-
-    console.info(element)
-    console.info(ElementoSelecionado)
-    console.info(EventoSelecionado)
 
     if(element.classList.contains('selecionado')) {
         element.classList.remove('selecionado')
@@ -203,7 +199,7 @@ async function abrirEditor(){
 }
 
 async function popularEditor() {
-    let EditarUrgenciaCompromisso = document.getElementById('urgencia__compromisso__lista__editar');
+    const EditarUrgenciaCompromisso = document.getElementById('urgencia__compromisso__lista__editar');
 
     const response = await fetch('http://localhost:3000/compromissos/' + EventoSelecionado)
     const data = await response.json();
